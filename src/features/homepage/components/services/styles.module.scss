@@ -1,0 +1,239 @@
+@import "../../../../styles/index.scss";
+
+.wrapper{
+    background-color: #11101C;
+    width: 100%;
+    padding: 60px 0px;
+
+    .container{
+        width: 90%;
+        margin: 0 auto;
+
+        .container_text{
+
+            h2{
+                font-family: Lato;
+                font-weight: 900;
+                font-size: 32px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+
+            p{
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 162%;
+                letter-spacing: 0%;
+                color: #B4B4B4;
+                width: 35%;
+            }
+        }
+
+        .gridWrapper{
+           margin-top: 60px;
+
+           .servicesGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px 15px;
+            // padding: 20px;
+          
+            .serviceCard {
+              position: relative;
+              border-radius: 12px;
+              overflow: hidden;
+              min-height: 300px;
+              background: var(--bg-image) center/cover no-repeat;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+          
+              &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+              }
+          
+              &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              }
+          
+              .content {
+                position: relative;
+                z-index: 2;
+                padding: 30px 20px;
+                color: white;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+              }
+          
+              .serviceName {
+                margin-bottom: 15px;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                font-family: Inter;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #fff;
+              }
+          
+              .serviceText {
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+                // opacity: 0.9;
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 142%;
+                letter-spacing: 0%;
+                color: #C3C2C2;
+              }
+            }
+          
+            @media (max-width: 1024px) {
+              grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+              gap: 20px;
+            }
+          
+            @media (max-width: 768px) {
+              grid-template-columns: 1fr;
+            }
+          }
+        }
+
+       
+    }
+}
+
+@include responsive("mobile"){
+
+  .wrapper{
+    background-color: #11101C;
+    width: 100%;
+    padding: 60px 0px;
+
+    .container{
+        width: 90%;
+        margin: 0 auto;
+
+        .container_text{
+
+            h2{
+                font-family: Lato;
+                font-weight: 900;
+                font-size: 25px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+
+            p{
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0%;
+                color: #B4B4B4;
+                width: 80%;
+            }
+        }
+
+        .gridWrapper{
+           margin-top: 60px;
+
+           .servicesGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px 15px;
+            // padding: 20px;
+          
+            .serviceCard {
+              position: relative;
+              border-radius: 12px;
+              overflow: hidden;
+              min-height: 300px;
+              background: var(--bg-image) center/cover no-repeat;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+          
+              &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+              }
+          
+              &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              }
+          
+              .content {
+                position: relative;
+                z-index: 2;
+                padding: 30px 20px;
+                color: white;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+              }
+          
+              .serviceName {
+                margin-bottom: 15px;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                font-family: Inter;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #fff;
+              }
+          
+              .serviceText {
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+                // opacity: 0.9;
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 142%;
+                letter-spacing: 0%;
+                color: #C3C2C2;
+              }
+            }
+          
+            @media (max-width: 1024px) {
+              grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+              gap: 20px;
+            }
+          
+            @media (max-width: 768px) {
+              grid-template-columns: 1fr;
+            }
+          }
+        }
+
+       
+    }
+}
+}
+
+
+
+
+ 
