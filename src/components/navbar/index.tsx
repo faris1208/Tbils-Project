@@ -52,7 +52,9 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
   }, [handleScroll]);
 
   return (
-    <div className={styles.wrapper}>
+    <div  className={`${isScrolled ? styles.wrapper_scrolled : styles.wrapper} ${
+      admin ? styles.admin : ""
+    }`}>
       <nav
         className={`${isScrolled ? styles.navbar_scrolled : styles.navbar} ${
           admin ? styles.admin : ""
@@ -89,7 +91,7 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
             ))}
           </ul>
           <div className={styles.btn}>
-            <Link href={"/contact"}>
+            <Link href={"/"}>
             <button>Contact Us</button>
             </Link>
           </div>

@@ -12,19 +12,19 @@ export default function Logo() {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.logo_image}>
-          <Image src={amad} alt="logo" width={100} height={50} className={styles.amad_image} />
+          <Image src={amad} alt="logo" width={100} height={100} className={styles.amad_image} />
         </div>
         <div className={styles.logo_image}>
-          <Image src={nanta} alt="logo" width={100} height={50} className={styles.amad_image} />
+          <Image src={nanta} alt="logo" width={100} height={100} className={styles.amad_image} />
         </div>
         <div className={styles.logo_image}>
-          <Image src={asus} alt="logo" width={100} height={50} className={styles.amad_image} />
+          <Image src={asus} alt="logo" width={100} height={100} className={styles.amad_image} />
         </div>
         <div className={styles.logo_image}>
-          <Image src={iata} alt="logo" width={100} height={50} className={styles.amad_image} />
+          <Image src={iata} alt="logo" width={100} height={100} className={styles.amad_image} />
         </div>
         <div className={styles.logo_image}>
-          <Image src={amad} alt="logo" width={100} height={50} className={styles.amad_image} />
+          <Image src={amad} alt="logo" width={100} height={100} className={styles.amad_image} />
         </div>
       </div>
     </div>

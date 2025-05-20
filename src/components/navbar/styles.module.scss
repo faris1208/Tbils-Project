@@ -15,8 +15,20 @@ $transition-duration: 0.3s;
   width: 100%;
   position: fixed;
   z-index: 1000;
-//   background-color: #000;
-//   background: rgba(66, 65, 65, 0.27);
+  background: #FFFFFF1F;
+//   background: #FFFFFF1F;
+
+  @include responsive("mobile") {
+    width: 100%;
+    top: 0px;
+  }
+}
+
+.wrapper_scrolled{
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background: rgba(66, 65, 65, 0.27);
 //   background: #FFFFFF1F;
 
   @include responsive("mobile") {
@@ -48,9 +60,8 @@ $transition-duration: 0.3s;
 
 .navbar {
   // background: rgba(66, 65, 65, 0.27);
-  // background-color: transparent;
-  // background: rgba(66, 65, 65, 0.27);
-  background: #FFFFFF1F;
+  background-color: transparent;
+  // background: #FFFFFF1F;
   max-width: 1440px;
   margin: 0 auto;
 
@@ -66,7 +77,7 @@ $transition-duration: 0.3s;
   color: #000;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #000;
+  background-color: transparent;
 
   @include responsive("mobile"){
     // border-radius: 26px;

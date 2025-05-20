@@ -4,6 +4,7 @@
     width: 100%;
     background-color: #F3F3F3;
 
+
     .container{
         display: flex;
         align-items:center ;
@@ -11,15 +12,17 @@
         // gap: 20px;
         width:90%;
         margin:  0 auto;
-        padding: 20px 0px;
+        max-width: 1440px;
+        padding: 0px 0px;
 
         .logo_image{
             // max-width: 300px;
             width: 100%;
-            min-height: 30px;
+            // min-height: 30px;
 
             .amad_image{
                 width: 100%;
+                // height: unset !important;
                 // height: 100%;
                 object-fit: contain;
                 // max-width: 300px;

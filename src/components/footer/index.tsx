@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../footer/styles.module.scss";
-import { FaceBookIcon, InstaIcon, LinkIcon, TwitterIcon } from "../icons";
+import { DownIcon, FaceBookIcon, GlobalIcon, InstaIcon, LinkIcon, TwitterIcon } from "../icons";
 import logo from "../../../public/assets/images/tbils_logo.svg";
 import Image from "next/image";
 
@@ -69,7 +69,10 @@ export default function Footer() {
               <div className={styles.footer_first_passport_container}>
                 <div className={styles.passport_flex}>
                   <div className={styles.dropdownContainer} ref={dropdownRef}>
-                    <h2 className={styles.title}>Your passport</h2>
+                    <div className={styles.global}>
+                      <GlobalIcon className={styles.global_icon} />
+                      <h2 className={styles.title}>Your passport</h2>
+                    </div>
                     <div
                       className={styles.dropdownHeader}
                       onClick={toggleDropdown}
@@ -80,7 +83,7 @@ export default function Footer() {
                           isOpen ? styles.open : ""
                         }`}
                       >
-                        ▼
+                        <DownIcon className={styles.icon_down} />
                       </span>
                     </div>
                     {isOpen && (
