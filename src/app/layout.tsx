@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Tbils",
   description: "Fly Smarter, Travel Further!",
+  icons: {
+    icon: "tbils_new.svg",
+  },
 };
 
 export default function RootLayout({
