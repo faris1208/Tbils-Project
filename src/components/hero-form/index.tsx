@@ -15,8 +15,9 @@ export interface FlightSearchData {
   returnDate: Date | null;
   flightType: string;
   travelType: string;
-  travelers: number;
+  travelers: number | "";
 }
+
 
 const FlightSearchForm: React.FC<FlightSearchFormProps> = ({ onSubmit }) => {
   const [formData, setFormData] = useState<FlightSearchData>({
@@ -29,15 +30,30 @@ const FlightSearchForm: React.FC<FlightSearchFormProps> = ({ onSubmit }) => {
     travelers: 1,
   });
 
+  // const handleInputChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  // ) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [name]: name === "travelers" ? parseInt(value) : value,
+  //   }));
+  // };
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
+    
     setFormData((prev) => ({
       ...prev,
-      [name]: name === "travelers" ? parseInt(value) : value,
+      [name]:
+        name === "travelers"
+          ? value === "" ? "" : parseInt(value)
+          : value,
     }));
   };
+  
 
   const handleDateChange = (
     date: Date | null,
@@ -144,7 +160,8 @@ const FlightSearchForm: React.FC<FlightSearchFormProps> = ({ onSubmit }) => {
                 name="travelers"
                 min="1"
                 max="10"
-                value={formData.travelers}
+                value={formData.travelers === "" ? "" : formData.travelers}
+                // value={formData.travelers}
                 onChange={handleInputChange}
                 required
               />

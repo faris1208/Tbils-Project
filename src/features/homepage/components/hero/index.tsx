@@ -1,12 +1,28 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../hero/styles.module.scss";
 import FlightSearchForm, { FlightSearchData } from "@/components/hero-form";
+import FlightDataModal from "./modal";
 
 export default function HomepageHero() {
+  const [modalData, setModalData] = useState<FlightSearchData | null>(null);
+
   const handleSearch = (formData: FlightSearchData) => {
-    console.log("Search submitted:", formData);
+    setModalData(formData);
   };
+
+  const closeModal = () => {
+    setModalData(null);
+  };
+
+  useEffect(() => {
+    if (modalData) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [modalData]);
+  
 
   return (
     <div className={styles.wrapper}>
@@ -25,6 +41,7 @@ export default function HomepageHero() {
           </div>
         </div>
       </div>
+      {modalData && <FlightDataModal data={modalData} onClose={closeModal} />}
     </div>
   );
 }

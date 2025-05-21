@@ -142,3 +142,29 @@ export const GlobalIcon: React.FC<Props> = ({ className }) => (
     />
   </svg>
 );
+
+export const AirplaneIcon: React.FC<Props> = ({ className }) => (
+  <svg
+    className={className}
+    width="41"
+    height="41"
+    viewBox="0 0 41 41"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="0.5"
+      y="0.5"
+      width="40"
+      height="40"
+      rx="20"
+      stroke="black"
+      strokeLinecap="square"
+      strokeDasharray="5 5"
+    />
+    <path
+      d="M30.8432 10.7246C31.5562 11.4375 31.5562 12.5854 30.8432 13.2863L26.1428 17.9867L28.7045 29.0913L27.0007 30.8071L22.3124 21.8292L17.5999 26.5417L18.0349 29.5263L16.742 30.8071L14.6153 26.9646L10.7607 24.8258L12.0416 23.5208L15.0624 23.9679L19.7387 19.2917L10.7607 14.5671L12.4766 12.8633L23.5812 15.425L28.2816 10.7246C28.9582 10.0238 30.1666 10.0238 30.8432 10.7246Z"
+      fill="#007BFF"
+    />
+  </svg>
+);
