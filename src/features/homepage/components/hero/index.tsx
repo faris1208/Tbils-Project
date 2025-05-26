@@ -3,16 +3,27 @@ import React, { useEffect, useState } from "react";
 import styles from "../hero/styles.module.scss";
 import FlightSearchForm, { FlightSearchData } from "@/components/hero-form";
 import FlightDataModal from "./modal";
+import { useRouter } from "next/navigation";
 
 export default function HomepageHero() {
   const [modalData, setModalData] = useState<FlightSearchData | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const handleSearch = (formData: FlightSearchData) => {
     setModalData(formData);
+    setIsLoading(true);
+    
+    const timer = setTimeout(() => {
+      router.push("/flight-listing");
+    }, 9000);
+
+    return () => clearTimeout(timer);
   };
 
   const closeModal = () => {
     setModalData(null);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -21,6 +32,11 @@ export default function HomepageHero() {
     } else {
       document.body.style.overflow = "auto";
     }
+
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [modalData]);
   
 
@@ -41,7 +57,13 @@ export default function HomepageHero() {
           </div>
         </div>
       </div>
-      {modalData && <FlightDataModal data={modalData} onClose={closeModal} />}
+      {modalData && (
+        <FlightDataModal 
+          data={modalData} 
+          onClose={closeModal} 
+          isLoading={isLoading} 
+        />
+      )}
     </div>
   );
 }

@@ -1,0 +1,163 @@
+.container {
+    width: 100%;
+
+    h3{
+        font-family: LatoRegular;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #1D1D1D;
+        margin-bottom: 15px;
+    }
+
+    .section {
+        background-color: #fff;
+        padding: 1rem;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+        .flightHeader {
+    
+            h3{
+                font-family: InterMedium;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #1d1d1d;
+                margin-bottom: 20px;
+            }
+          }
+    
+          .details_box{
+            display: flex;
+            gap: 25px;
+    
+            .airportDetails {
+                margin-bottom: 0.5rem;
+        
+                p{
+                    font-family: Inter;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    color: #878787;
+                    margin-bottom: 5px;
+                }
+              }
+          }
+    
+         
+    
+          .checkboxWrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .reminder{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+    
+                p{
+                    font-family: InterMedium;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    color: #1D1D1D;
+                }
+            }
+    
+            span{
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #4E4E4E;
+            }
+          }
+    
+          .base{
+            margin-bottom: 15px;
+    
+            p{
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #1D1D1D;
+                margin-bottom: 5px;
+                
+                // span{
+                //     line-height: 50px;
+                // }
+            }
+          }
+    
+          .fare{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            p{
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #878787;
+            }
+    
+            .amount{
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #4E4E4E;
+            }
+          }
+    
+            
+      .total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        p{
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #878787;
+        }
+    
+        .amount{
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #4E4E4E;
+        }
+      }
+      }
+
+  }
+  
+  
+  
+ 
+  
+  
+  
+ 
+
+  

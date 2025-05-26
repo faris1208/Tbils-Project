@@ -1,0 +1,474 @@
+@import "../../../styles//index.scss";
+
+.formContainer {
+  width: 100%;
+
+  h3{
+    font-family: LatoRegular;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #1D1D1D;
+    margin-bottom: 15px;
+  }
+
+  .first{
+    background: #fff;
+    border-radius: 5px;
+
+    .sectionHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #CFCFCF;
+        padding: 20px 20px 0px;
+    
+        h3{
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #1D1D1D;
+        }
+    
+        .badge {
+          color: #FF6600;
+          padding: 0.2rem 0.5rem;
+          border-radius: 15px;
+          margin-left: 0.5rem;
+          background: #FCC9A754;
+          font-family: Inter;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 100%;
+          letter-spacing: 0%;
+        }
+    
+        .protected {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+    
+          p{
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #1D1D1D;
+          }
+        }
+      }
+    
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+        margin-bottom: 2rem;
+        padding:0px 20px 20px;
+    
+        .inputGroup {
+          display: flex;
+          flex-direction: column;
+    
+          label {
+            margin-bottom: 0.3rem;
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #1D1D1D;
+          }
+    
+          input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #7F7F7F;
+          }
+    
+          select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #7F7F7F;
+          }
+    
+          input[type="date"] {
+            padding-right: 1rem;
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #7F7F7F;
+          }
+        }
+      }
+
+  }
+
+  .second{
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 5px;
+    .sectionHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #CFCFCF;
+        padding: 20px 20px 0px;
+    
+        h3{
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #1D1D1D;
+        }
+    
+        .badge {
+          color: #FF6600;
+          padding: 0.2rem 0.5rem;
+          border-radius: 15px;
+          margin-left: 0.5rem;
+          background: #FCC9A754;
+          font-family: Inter;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 100%;
+          letter-spacing: 0%;
+        }
+    
+        .protected {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+    
+          p{
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #1D1D1D;
+          }
+        }
+      }
+
+      .feedbackSection {
+        display: flex;
+        gap: 30px;
+        padding:10px 20px 20px;
+
+        .inputGroup {
+            display: flex;
+            flex-direction: column;
+      
+            label {
+              margin-bottom: 0.3rem;
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #1D1D1D;
+            }
+      
+            input {
+              padding: 0.5rem;
+              border: 1px solid #ccc;
+              border-radius: 6px;
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #7F7F7F;
+            }
+      
+            select {
+              padding: 0.5rem;
+              border: 1px solid #ccc;
+              border-radius: 6px;
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #7F7F7F;
+            }
+      
+            input[type="date"] {
+              padding-right: 1rem;
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #7F7F7F;
+            }
+          }
+      }
+  }
+
+  
+
+ 
+}
+
+@include responsive ("mobile"){
+
+  .formContainer {
+    width: 100%;
+  
+    h3{
+      font-family: LatoRegular;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #1D1D1D;
+      margin-bottom: 15px;
+    }
+  
+    .first{
+      background: #fff;
+      border-radius: 5px;
+  
+      .sectionHeader {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-start;
+          margin-bottom: 1rem;
+          border-bottom: 1px solid #CFCFCF;
+          padding: 20px 10px 0px;
+      
+          h3{
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #1D1D1D;
+          }
+      
+          .badge {
+            color: #FF6600;
+            padding: 0.2rem 0.5rem;
+            border-radius: 15px;
+            margin-left: 0.5rem;
+            background: #FCC9A754;
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 100%;
+            letter-spacing: 0%;
+          }
+      
+          .protected {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+      
+            p{
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #727070;
+            }
+          }
+        }
+      
+        .grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          gap: 30px;
+          margin-bottom: 2rem;
+          padding:0px 10px 20px;
+      
+          .inputGroup {
+            display: flex;
+            flex-direction: column;
+      
+            label {
+              margin-bottom: 0.3rem;
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #1D1D1D;
+            }
+      
+            input {
+              padding: 0.5rem;
+              border: 1px solid #ccc;
+              border-radius: 6px;
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #7F7F7F;
+            }
+      
+            select {
+              padding: 0.5rem;
+              border: 1px solid #ccc;
+              border-radius: 6px;
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #7F7F7F;
+            }
+      
+            input[type="date"] {
+              padding-right: 1rem;
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #7F7F7F;
+            }
+          }
+        }
+  
+    }
+  
+    .second{
+      margin-top: 30px;
+      background: #fff;
+      border-radius: 5px;
+      .sectionHeader {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-start;
+          border-bottom: 1px solid #CFCFCF;
+          padding: 20px 10px 0px;
+      
+          h3{
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #1D1D1D;
+          }
+      
+          .badge {
+            color: #FF6600;
+            padding: 0.2rem 0.5rem;
+            border-radius: 15px;
+            margin-left: 0.5rem;
+            background: #FCC9A754;
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            // border: 2px solid blue;
+          }
+      
+          .protected {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+      
+            p{
+              font-family: Inter;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              color: #727070;
+            }
+          }
+        }
+  
+        .feedbackSection {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          padding:10px 10px 20px;
+  
+          .inputGroup {
+              display: flex;
+              flex-direction: column;
+        
+              label {
+                margin-bottom: 0.3rem;
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #1D1D1D;
+              }
+        
+              input {
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #7F7F7F;
+              }
+        
+              select {
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #7F7F7F;
+              }
+        
+              input[type="date"] {
+                padding-right: 1rem;
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #7F7F7F;
+              }
+            }
+        }
+    }
+  
+    
+  
+   
+  }
+}
