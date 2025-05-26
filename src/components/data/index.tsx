@@ -1,4 +1,8 @@
 import canada from '../../../public/assets/images/image 27.svg'
+import canadavisa from '../../../public/assets/images/canada_space.jpg'
+import usa from '../../../public/assets/images/usa_space.jpg'
+import schengen from '../../../public/assets/images/schengen_space.jpg'
+import uk from '../../../public/assets/images/uk_space.jpg'
 
 export const ticket = [
     {
@@ -103,4 +107,32 @@ export const services = [
         text: "Comprehensive travel insurance plans for your safety and peace of mind on every journey.",
         backgroundImage: "/assets/images/three_woamn.jpg",
     },
+]
+
+
+export const applyCountries = [
+    {
+        id:"1",
+        image: canadavisa,
+        name: "Canada",
+        description: "Our Canada visa application provides comprehensive assistance for obtaining visa to any countries  ",
+    },
+    {
+        id:"2",
+        image: usa,
+        name: "Usa",
+        description: "Our USA visa application provides comprehensive assistance for obtaining visa to any countries  ",
+    },
+    {
+        id:"3",
+        image: schengen,
+        name: "Schengen",
+        description: "Our Schengen visa application provides comprehensive assistance for obtaining visa to any countries  ",
+    },
+    {
+        id:"4",
+        image: uk,
+        name: "Uk",
+        description: "Our UK visa application provides comprehensive assistance for obtaining visa to any countries  ",
+    }
 ]

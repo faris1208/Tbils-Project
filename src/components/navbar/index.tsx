@@ -33,12 +33,12 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
         // { path: "/", label: "Home" },
         // { path: "/traveler-details", label: "" },
         { path: "/", label: "Home", targetSection: "visa" },
-        { path: "/visa", label: "Visa", targetSection: "visa" },
+        { path: "/visa-application", label: "Visa", targetSection: "visa" },
         { path: "/blog", label: "Blog", targetSection: "blog" },
       ]
     : [
         { path: "/", label: "Home", targetSection: "home" },
-        { path: "/visa", label: "Visa", targetSection: "visa" },
+        { path: "/visa-application", label: "Visa", targetSection: "visa" },
         { path: "/blog", label: "Blog", targetSection: "blog" },
       ];
 
