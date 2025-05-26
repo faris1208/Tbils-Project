@@ -25,13 +25,14 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // const isFlightVariant = pathname.startsWith("/traveler-details");
-  const isFlightOrPaymentPage = pathname.startsWith("/flight-listing") || pathname.startsWith("/payment");
+  const isFlightOrPaymentPage = pathname.startsWith("/flight-listing") || pathname.startsWith("/payment")  || pathname.startsWith("/contact");
 
 
   const navLinks: NavLink[] = isFlightOrPaymentPage
     ? [
-        { path: "/", label: "Home" },
-        { path: "/traveler-details", label: "" },
+        // { path: "/", label: "Home" },
+        // { path: "/traveler-details", label: "" },
+        { path: "/", label: "Home", targetSection: "visa" },
         { path: "/visa", label: "Visa", targetSection: "visa" },
         { path: "/blog", label: "Blog", targetSection: "blog" },
       ]
@@ -110,7 +111,7 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
             ))}
           </ul>
           <div className={styles.btn}>
-            <Link href={"/"}>
+            <Link href={"/contact"}>
               <button>Contact Us</button>
             </Link>
           </div>
