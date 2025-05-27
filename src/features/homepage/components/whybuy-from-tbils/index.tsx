@@ -23,7 +23,7 @@ export default function WhyBuyFromTbils() {
             <div className={`${styles.card} ${styles.large}`}>{renderCard(buyTbils[5])}</div>
           </div>
         </div>
-        <div className={styles.servicesGrid}>
+        {/* <div className={styles.servicesGrid}>
             {buyTbils.map((service) => (
               <div
                 key={service.id}
@@ -40,18 +40,23 @@ export default function WhyBuyFromTbils() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
       </div>
     </div>
   )
 }
 
-const renderCard = (item: { id: string, name: string, text: string, backgroundImage: string }) => (
+const renderCard = (item: { id: string, name: string, text: string, backgroundImage: string, overlayColor?: string, textColor?: string }) => (
     <div
       className={styles.cardInner}
-      style={{ backgroundImage: `url(${item.backgroundImage})` }}
+      style={{ backgroundImage: `url(${item.backgroundImage})`
+       }}
     >
-      <div className={styles.overlay}>
+      <div className={styles.overlay}
+      style={{
+        backgroundColor: (item.overlayColor || 'rgba(0,0,0,0.4)').replace(/;/g, ''),
+        color: (item.textColor || '#fff').replace(/;/g, '')
+      }}>
         <p className={styles.item_name}>{item.name}</p>
         <p>{item.text}</p>
       </div>

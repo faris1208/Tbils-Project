@@ -25,7 +25,7 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // const isFlightVariant = pathname.startsWith("/traveler-details");
-  const isFlightOrPaymentPage = pathname.startsWith("/flight-listing") || pathname.startsWith("/payment")  || pathname.startsWith("/contact");
+  const isFlightOrPaymentPage =  pathname.startsWith("/traveler-details") || pathname.startsWith("/payment")  || pathname.startsWith("/contact");
 
 
   const navLinks: NavLink[] = isFlightOrPaymentPage
@@ -96,7 +96,11 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
         </div>
 
         <div
-        className={`${styles.desktop_nav} ${isFlightOrPaymentPage ? styles.flight_nav : ""}`}
+        className={`${styles.desktop_nav} ${
+          isScrolled && isFlightOrPaymentPage ? styles.flight_nav : ''
+        } ${
+          !isScrolled && isFlightOrPaymentPage ? styles.flight_nav_color : ''
+        }`}
         >
           <ul>
             {navLinks.map((link) => (
