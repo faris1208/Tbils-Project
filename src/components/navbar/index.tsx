@@ -25,7 +25,7 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // const isFlightVariant = pathname.startsWith("/traveler-details");
-  const isFlightOrPaymentPage =  pathname.startsWith("/traveler-details") || pathname.startsWith("/payment")  || pathname.startsWith("/contact");
+  const isFlightOrPaymentPage =  pathname.startsWith("/traveler-details") || pathname.startsWith("/payment")  || pathname.startsWith("/contact")   || pathname.startsWith("/apply");
 
 
   const navLinks: NavLink[] = isFlightOrPaymentPage
@@ -34,12 +34,12 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
         // { path: "/traveler-details", label: "" },
         { path: "/", label: "Home", targetSection: "visa" },
         { path: "/visa-application", label: "Visa", targetSection: "visa" },
-        { path: "/blog", label: "Blog", targetSection: "blog" },
+        // { path: "/blog", label: "Blog", targetSection: "blog" },
       ]
     : [
         { path: "/", label: "Home", targetSection: "home" },
         { path: "/visa-application", label: "Visa", targetSection: "visa" },
-        { path: "/blog", label: "Blog", targetSection: "blog" },
+        // { path: "/blog", label: "Blog", targetSection: "blog" },
       ];
 
   const handleScrollToSection = (sectionId?: string) => {

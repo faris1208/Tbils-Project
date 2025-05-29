@@ -40,9 +40,9 @@ export default function ChooseCountry() {
                             <p  className={styles.apply_name}>{apply.name}</p>
                             <p>{apply.description}</p>
                             <div className={styles.btn}>
-                                <button>Apply Now</button>
+                                <button onClick={handleClick}>Apply Now</button>
                             </div>
-                            <div onClick={handleClick} className={styles.countries}></div>
+                            <div className={styles.countries}></div>
                         </div>
                     </div>
                 ))}
