@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../ticket/styles.module.scss";
 import sky from "../../../../../public/assets/images/Frame 61.svg";
 import Image from "next/image";
@@ -17,15 +17,25 @@ import { ticket } from "@/components/data";
 //   }
 
 export default function TicketHero() {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    const container = e.currentTarget;
-    const scrollPosition = container.scrollTop;
-    const itemHeight = container.scrollHeight / ticket.length;
-    const newIndex = Math.round(scrollPosition / itemHeight);
-    setActiveIndex(Math.min(Math.max(newIndex, 0), ticket.length - 1));
+  const handleScroll = () => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const cardHeight = 300; // approx. full height of active card
+    const centerIndex = Math.round(container.scrollTop / cardHeight);
+    setActiveIndex(centerIndex);
   };
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    container.addEventListener("scroll", handleScroll, { passive: true });
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -49,28 +59,20 @@ export default function TicketHero() {
             </div>
           </div>
           <div className={styles.canada}>
-            <div className={styles.categories} onScroll={handleScroll}>
-              {ticket.map((tick, index) => (
-                <div
-                  className={`${styles.box} ${
-                    index === activeIndex ? styles.active : ""
-                  }`}
-                  key={tick.id}
-                  onClick={() => setActiveIndex(index)}
-                >
-                  <div className={styles.logo}>
-                    <Image
-                      src={tick.image}
-                      alt={tick.name}
-                      width={index === activeIndex ? 70 : 50}
-                      height={index === activeIndex ? 70 : 50}
-                      className={styles.canada_logo}
-                    />
-                  </div>
-                  <p className={styles.bold}>{tick.name}</p>
-                  <p>{tick.description}</p>
-                </div>
-              ))}
+            <div className={styles.sliderContainer} ref={containerRef}>
+            {ticket.map((item, index) => (
+  <div
+    key={item.id}
+    className={`${styles.ticketCard} ${
+      index === activeIndex ? styles.active : ""
+    }`}
+    style={{ backgroundImage: `url(${item.backgroundImage})` }}
+  >
+    <Image src={item.image} alt={item.name} width={80} height={80} />
+    <h3>{item.name}</h3>
+    <p>{item.description}</p>
+  </div>
+))}
             </div>
           </div>
         </div>

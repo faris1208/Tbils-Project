@@ -48,7 +48,14 @@ export default function ChooseCountry() {
                   <div className={styles.btn}>
                     <button onClick={handleClick}>Apply Now</button>
                   </div>
-                  <div className={styles.countries}></div>
+                  <div className={styles.countries}>
+                    <Image 
+                    src={apply.flag}
+                    alt="flag"
+                    width={80}
+                    height={80}
+                    />
+                  </div>
                 </div>
               </div>
             ))}

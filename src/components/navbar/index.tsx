@@ -25,8 +25,11 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // const isFlightVariant = pathname.startsWith("/traveler-details");
-  const isFlightOrPaymentPage =  pathname.startsWith("/traveler-details") || pathname.startsWith("/payment")  || pathname.startsWith("/contact")   || pathname.startsWith("/apply");
-
+  const isFlightOrPaymentPage =
+    pathname.startsWith("/traveler-details") ||
+    pathname.startsWith("/payment") ||
+    pathname.startsWith("/contact") ||
+    pathname.startsWith("/apply");
 
   const navLinks: NavLink[] = isFlightOrPaymentPage
     ? [
@@ -68,12 +71,15 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
 
   return (
     <div
-    className={`
+      className={`
       ${isScrolled ? styles.wrapper_scrolled : styles.wrapper} 
       ${admin ? styles.admin : ""}
-      ${isScrolled && isFlightOrPaymentPage ? styles.flight_wrapper_scroll : styles.flight_wrapper}
+      ${
+        isScrolled && isFlightOrPaymentPage
+          ? styles.flight_wrapper_scroll
+          : styles.flight_wrapper
+      }
     `}
-    
     >
       <nav
         className={`${isScrolled ? styles.navbar_scrolled : styles.navbar} ${
@@ -96,11 +102,11 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
         </div>
 
         <div
-        className={`${styles.desktop_nav} ${
-          isScrolled && isFlightOrPaymentPage ? styles.flight_nav : ''
-        } ${
-          !isScrolled && isFlightOrPaymentPage ? styles.flight_nav_color : ''
-        }`}
+          className={`${styles.desktop_nav} ${
+            isScrolled && isFlightOrPaymentPage ? styles.flight_nav : ""
+          } ${
+            !isScrolled && isFlightOrPaymentPage ? styles.flight_nav_color : ""
+          }`}
         >
           <ul>
             {navLinks.map((link) => (
@@ -126,7 +132,11 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
-          <Hamburger className={styles.hamburger} />
+          {isFlightOrPaymentPage && !isScrolled ? (
+            <CloseIcon className={styles.hamburger} />
+          ) : (
+            <Hamburger className={styles.hamburger} />
+          )}
         </button>
 
         <div

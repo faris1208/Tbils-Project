@@ -3,10 +3,17 @@ import canadavisa from "../../../public/assets/images/canada_space.jpg";
 import usa from "../../../public/assets/images/usa_space.jpg";
 import schengen from "../../../public/assets/images/schengen_space.jpg";
 import uk from "../../../public/assets/images/uk_space.jpg";
+import canadaFlag from "../../../public/assets/images/canada.svg";
+import usFlag from "../../../public/assets/images/us_flag.svg";
+import schengenFlag from "../../../public/assets/images/schengen.svg";
+import ukFlag from "../../../public/assets/images/Uk_flag.svg";
+import plane from "../../../public/assets/images/small_plane.svg";
+import smallPlane from "../../../public/assets/images/plane-3 1.svg";
 
 export const ticket = [
   {
     id: "1",
+    backgroundImage: "/assets/images/ticket_background.svg",
     image: canada,
     name: "Canada",
     description:
@@ -14,6 +21,7 @@ export const ticket = [
   },
   {
     id: "2",
+    backgroundImage: "/assets/images/ticket_background.svg",
     image: canada,
     name: "Usa",
     description:
@@ -21,6 +29,7 @@ export const ticket = [
   },
   {
     id: "3",
+    backgroundImage: "/assets/images/ticket_background.svg",
     image: canada,
     name: "Ghana",
     description:
@@ -28,6 +37,7 @@ export const ticket = [
   },
   {
     id: "4",
+    backgroundImage: "/assets/images/ticket_background.svg",
     image: canada,
     name: "Nigeria",
     description:
@@ -132,6 +142,7 @@ export const applyCountries = [
     name: "Canada",
     description:
       "Our Canada visa application provides comprehensive assistance for obtaining visa to any countries  ",
+      flag: canadaFlag,
   },
   {
     id: "2",
@@ -139,6 +150,7 @@ export const applyCountries = [
     name: "Usa",
     description:
       "Our USA visa application provides comprehensive assistance for obtaining visa to any countries  ",
+      flag: usFlag,
   },
   {
     id: "3",
@@ -146,6 +158,7 @@ export const applyCountries = [
     name: "Schengen",
     description:
       "Our Schengen visa application provides comprehensive assistance for obtaining visa to any countries  ",
+      flag: schengenFlag,
   },
   {
     id: "4",
@@ -153,6 +166,53 @@ export const applyCountries = [
     name: "Uk",
     description:
       "Our UK visa application provides comprehensive assistance for obtaining visa to any countries  ",
+      flag: ukFlag,
+  },
+];
+
+export const assistance = [
+  {
+    id: "1",
+    image: plane,
+    name: "Comprehensive Consultation",
+    descriptionOne:
+      "Personalized Experience: Tailored advice based on your travel destination and purpose.",
+      descriptionTwo: "Requirement Overview: Detailed information about the visa requirements for your destination country.",
+      descriptionThree: "Document Checklist: A comprehensive list of necessary document to ensure you are fully prepared.",
+  },
+  {
+    id: "2",
+    image: plane,
+    name: "Document Preparation",
+    descriptionOne:
+      "Document Review: We meticulously review all your document to ensure you meet the specific requirement.",
+      descriptionTwo: "Form Assistance: Help with filling out visa application forms accurately.",
+      descriptionThree: "Supporting Document: Guidance on preparing additional supporting documents, such as invitation letters, financial statements, and travel itinaries.",
+  },
+  {
+    id: "3",
+    image: plane,
+    name: "Application Submission",
+    descriptionOne:
+    "Step-by-Step Guidance: Clear instructions on how to submit your application, whether online or in-person.",
+    descriptionTwo: "Appointment Scheduling: Assistance with scheduling appointments at embassies and consulates.",
+    descriptionThree: "Tracking: Monitoring the status of your application and providing updates.",
+  },
+  {
+    id: "4",
+    image: plane,
+    name: "Interview Preparation",
+    descriptionOne:
+      "Interview Tips: Comprehensive tips and advices on how to prepare for your visa interview.",
+      descriptionTwo: "Mock Interviews: Practice sessions to boost your confidence and ensure you are well-prepared.",
+  },
+  {
+    id: "5",
+    image: smallPlane,
+    name: "Post-Visa Support",
+    descriptionOne:
+      "Travel Advisories: Latest updates and travel advisories for your destinations.",
+      descriptionTwo: "Itinerary Planning: Assistance with planning your travel itinerary once your visa is approved .",
   },
 ];
 

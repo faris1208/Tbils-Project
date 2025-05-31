@@ -99,7 +99,18 @@ const FlightSearchForm: React.FC<FlightSearchFormProps> = ({ onSubmit }) => {
                 required
               />
             </div>
-
+            <div className={styles.formGroup}>
+              <label htmlFor="travelType">Travel type</label>
+              <select
+                id="travelType"
+                name="travelType"
+                value={formData.travelType}
+                onChange={handleInputChange}
+              >
+                <option value="Return">Return</option>
+                <option value="One-way">One-way</option>
+              </select>
+            </div>
             <div className={styles.formGroup}>
               <label htmlFor="departure">Departure</label>
               <DatePicker
@@ -113,7 +124,7 @@ const FlightSearchForm: React.FC<FlightSearchFormProps> = ({ onSubmit }) => {
               />
             </div>
 
-            <div className={styles.formGroup}>
+            {/* <div className={styles.formGroup}>
               <label htmlFor="returnDate">Return date</label>
               <DatePicker
                 id="returnDate"
@@ -124,7 +135,21 @@ const FlightSearchForm: React.FC<FlightSearchFormProps> = ({ onSubmit }) => {
                 minDate={formData.departure || new Date()}
                 disabled={formData.travelType === "One-way"}
               />
-            </div>
+            </div> */}
+
+            {formData.travelType === "Return" && (
+  <div className={styles.formGroup}>
+    <label htmlFor="returnDate">Return date</label>
+    <DatePicker
+      id="returnDate"
+      selected={formData.returnDate}
+      onChange={(date) => handleDateChange(date, "returnDate")}
+      placeholderText="Select date"
+      className={styles.dateInput}
+      minDate={formData.departure || new Date()}
+    />
+  </div>
+)}
             <div className={styles.formGroup}>
               <label htmlFor="flightType">Flight type</label>
               <select
@@ -139,18 +164,7 @@ const FlightSearchForm: React.FC<FlightSearchFormProps> = ({ onSubmit }) => {
               </select>
             </div>
 
-            <div className={styles.formGroup}>
-              <label htmlFor="travelType">Travel type</label>
-              <select
-                id="travelType"
-                name="travelType"
-                value={formData.travelType}
-                onChange={handleInputChange}
-              >
-                <option value="Return">Return</option>
-                <option value="One-way">One-way</option>
-              </select>
-            </div>
+            
 
             <div className={styles.formGroup}>
               <label htmlFor="travelers">No. of travelers</label>
