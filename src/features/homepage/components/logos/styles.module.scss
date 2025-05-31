@@ -6,14 +6,21 @@
 
 
     .container{
-        display: flex;
-        align-items:center ;
-        justify-content: space-between;
-        // gap: 20px;
-        width:90%;
+       
+        width:100%;
         margin:  0 auto;
         max-width: 1440px;
-        padding: 0px 0px;
+
+        .container_width{
+            display: flex;
+            align-items:center ;
+            justify-content: space-between;
+            // gap: 20px;
+            width:90%;
+            margin:  0 auto;
+            max-width: 1440px;
+            padding: 0px 0px;
+        }
 
         .logo_image{
             // max-width: 300px;

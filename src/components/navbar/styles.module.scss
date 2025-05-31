@@ -86,6 +86,7 @@ $transition-duration: 0.3s;
   // background: #FFFFFF1F;
   max-width: 1440px;
   margin: 0 auto;
+  // width: 100%;
 
   @include responsive("mobile"){
     border-radius: 26px;
@@ -112,6 +113,7 @@ $transition-duration: 0.3s;
 
   .logo_black {
     display: block;
+    border: 2px solid red;
   }
 
   a, li {
@@ -302,7 +304,7 @@ $transition-duration: 0.3s;
   top: -10px;
   right: -100%;
   width: 100%;
-  height: 60vh;
+  height: 100vh;
   background-color: #fff;
   z-index: 1001;
   transition: right 0.5s ease;
@@ -337,7 +339,7 @@ $transition-duration: 0.3s;
 
   li {
     margin-bottom: 30px;
-    font-family: Work;
+    font-family: Inter;
   }
 
   a {
@@ -346,7 +348,7 @@ $transition-duration: 0.3s;
     font-size: 18px;
     font-weight: 500;
     transition: all $transition-duration ease;
-    font-family: Work;
+    font-family: Inter;
 
     &:hover {
       color: #ffcda8;

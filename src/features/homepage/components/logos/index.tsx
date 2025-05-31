@@ -11,6 +11,7 @@ export default function Logo() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
+        <div className={styles.container_width}>
         <div className={styles.logo_image}>
           <Image src={amad} alt="logo" width={100} height={100} className={styles.amad_image} />
         </div>
@@ -26,6 +27,8 @@ export default function Logo() {
         <div className={styles.logo_image}>
           <Image src={amad} alt="logo" width={100} height={100} className={styles.amad_image} />
         </div>
+        </div>
+       
       </div>
     </div>
   );

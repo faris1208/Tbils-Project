@@ -8,10 +8,16 @@
 
 
     .container{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         max-width: 1440px;
-        position: relative;
+        
+
+        .container_width{
+            width: 90%;
+        margin: 0 auto;
+            position: relative;
+        }
 
         .text{
             display: flex;
@@ -164,10 +170,15 @@
     
     
         .container{
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             max-width: 1440px;
-            position: relative;
+
+            .container_width{
+                width: 90%;
+            margin: 0 auto;
+                position: relative;
+            }
     
             .text{
                 display: flex;

@@ -7,12 +7,14 @@ export default function FlightsPage() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.pageLayout}>
-        <aside className={styles.filtersSidebar}>
-          <FlightFilters />
-        </aside>
-        <main className={styles.flightsList}>
-          <FlightBooking />
-        </main>
+        <div className={styles.pageLayout_width}>
+          <aside className={styles.filtersSidebar}>
+            <FlightFilters />
+          </aside>
+          <main className={styles.flightsList}>
+            <FlightBooking />
+          </main>
+        </div>
       </div>
     </div>
   );

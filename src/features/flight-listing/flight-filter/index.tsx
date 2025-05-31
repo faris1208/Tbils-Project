@@ -63,7 +63,7 @@ export default function FlightFilters() {
 
   return (
     <div className={styles.filtersContainer}>
-      <h3 className={styles.filtersHeader}>Filter</h3>
+      <h3>Filter</h3>
       
       {filters.map((group, groupIndex) => (
         <div key={group.title} className={styles.filterGroup}>

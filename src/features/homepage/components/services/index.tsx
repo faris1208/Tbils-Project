@@ -17,11 +17,11 @@ export default function HeroServices() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
+        <div className={styles.container_width}>
         <div className={styles.container_text}>
           <h2>Our Services</h2>
           <p>Enjoy a seamless travel experience with these amazing benefits!</p>
         </div>
-
         <div className={styles.gridWrapper}>
           <div className={styles.servicesGrid}>
             {services.map((service) => (
@@ -42,6 +42,8 @@ export default function HeroServices() {
             ))}
           </div>
         </div>
+        </div>
+        
       </div>
     </div>
   );

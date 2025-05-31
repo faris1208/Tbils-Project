@@ -61,6 +61,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div  className={styles.overlay}>
           <div className={styles.footer_first}>
+            <div className={styles.container_width}>
             <div className={styles.footer_first_text}>
               <h2>Travel without limits</h2>
               <p>Apply and get your visa with simple steps in Tbils</p>
@@ -110,6 +111,8 @@ export default function Footer() {
                 </div>
               </div>
             </div>
+            </div>
+            
           </div>
         </div>
       </div>
