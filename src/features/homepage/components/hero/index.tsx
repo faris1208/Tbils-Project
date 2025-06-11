@@ -10,15 +10,15 @@ export default function HomepageHero() {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
-  const handleSearch = (formData: FlightSearchData) => {
+
+  const handleSearch = async (formData: FlightSearchData) => {
     setModalData(formData);
     setIsLoading(true);
-    
-    const timer = setTimeout(() => {
-      router.push("/flight-listing");
-    }, 9000);
 
-    return () => clearTimeout(timer);
+    // Simulate delay with async
+    // await new Promise((resolve) => setTimeout(resolve, 9000));
+
+    router.push("/flight-listing");
   };
 
   const closeModal = () => {

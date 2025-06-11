@@ -1,0 +1,235 @@
+@import "../../../styles/index.scss";
+
+.wrapper{
+    background-image: url("../../../../public/assets/images/homepage/landing_hero.svg");
+    // background-position: center;
+    background-position: center center;
+    background-size: cover;
+    // background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    // height: 100vh;
+    height: 750px;
+    position: relative;
+    background-color: #f3f3f3;
+
+    .conatiner{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        // background: linear-gradient(170.22deg, rgba(255, 255, 255, 0) 50.89%, #F3F3F3 67.37%);
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+
+        .conatiner_box{
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+             // width: 100%;
+            gap: 70px;
+            max-width: 1440px;
+            margin: 0 auto;
+
+            .conatiner_text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 145px;
+                h2{
+                    font-family: LatoB;
+                    font-weight: 900;
+                    font-size: 64px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: #1D1D1D;
+                }
+    
+                p{
+                    font-family: Inter;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 162%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: #404040;
+                    width:100%;
+                    margin-top: 15px;
+                }
+
+                .btn{
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 30px;
+
+                    .btn_one{
+                        background: #007BFF;
+                        backdrop-filter: blur(19.100000381469727px);
+                        padding: 18px 60px;
+                        border-radius: 5px;
+                        border: none;
+                        cursor: pointer;
+                        font-family: Lato;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        color: #fff;
+
+                        &:hover{
+                            background: #0169d8;
+                        }
+                    }
+
+                    .btn_two{
+                        background: transparent;
+                        backdrop-filter: blur(19.100000381469727px);
+                        padding: 18px 60px;
+                        border-radius: 5px;
+                        border: 1px solid #404040;
+                        cursor: pointer;
+                        font-family: Lato;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        color: #000000;
+
+                        &:hover{
+                            background: #007BFF;
+                            color: #fff;
+                            border: 1px solid #007BFF;
+                        }
+                    }
+                }
+            }
+
+           
+        }
+
+        
+    }
+    
+
+}
+
+@include responsive("mobile"){
+
+    .wrapper{
+        // background-image: url("../../../../../public//assets/images/homepage/airplane.jpg");
+        background-image: url("../../../../public/assets/images/homepage/landing_hero.svg");
+        // background-position: center;
+        background-position: center center;
+        background-size: cover;
+        // background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        max-width: 1440px;
+        height: 600px;
+        position: relative;
+        background-color: #f3f3f3;
+    
+        .conatiner{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            // background: linear-gradient(170.22deg, rgba(255, 255, 255, 0) 50.89%, #F3F3F3 77.37%);
+            display: flex;
+            // justify-content: flex-end;
+            // align-items: flex-end;
+    
+            .conatiner_box{
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                justify-content: space-between;
+                gap: 0px;
+                
+    
+                .conatiner_text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 100px;
+                    h2{
+                        font-family: LatoB;
+                        font-weight: 900;
+                        font-size: 32px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        text-align: center;
+                        color: #1D1D1D;
+                        width: 95%;
+                    }
+        
+                    p{
+                        font-family: Inter;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 162%;
+                        letter-spacing: 0%;
+                        text-align: center;
+                        color: #000000;
+                        width:90%;
+                        margin-top: 15px;
+                    }
+
+                    .btn{
+                        display: flex;
+                        gap: 10px;
+                        margin-top: 15px;
+    
+                        .btn_one{
+                            background: #007BFF;
+                            backdrop-filter: blur(19.100000381469727px);
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            border: none;
+                            cursor: pointer;
+                            font-family: Lato;
+                            font-weight: 700;
+                            font-size: 13px;
+                            line-height: 100%;
+                            letter-spacing: 0%;
+                            color: #fff;
+    
+                            &:hover{
+                                background: #0169d8;
+                            }
+                        }
+    
+                        .btn_two{
+                            background: transparent;
+                            backdrop-filter: blur(19.100000381469727px);
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            border: 1px solid #404040;
+                            cursor: pointer;
+                            font-family: Lato;
+                            font-weight: 700;
+                            font-size: 13px;
+                            line-height: 100%;
+                            letter-spacing: 0%;
+                            color: #000000;
+    
+                            &:hover{
+                                background: #007BFF;
+                                color: #fff;
+                                border: 1px solid #007BFF;
+                            }
+                        }
+                    }
+                }
+    
+               
+            }
+    
+            
+        }
+        
+    
+    }
+}

@@ -29,20 +29,18 @@ const NavBar: React.FC<NavBarProps> = ({ admin = false }) => {
     pathname.startsWith("/traveler-details") ||
     pathname.startsWith("/payment") ||
     pathname.startsWith("/contact") ||
+    // pathname.startsWith("/") ||
+    pathname === "/" ||
     pathname.startsWith("/apply");
 
   const navLinks: NavLink[] = isFlightOrPaymentPage
     ? [
-        // { path: "/", label: "Home" },
-        // { path: "/traveler-details", label: "" },
         { path: "/", label: "Home", targetSection: "visa" },
         { path: "/visa-application", label: "Visa", targetSection: "visa" },
-        // { path: "/blog", label: "Blog", targetSection: "blog" },
       ]
     : [
         { path: "/", label: "Home", targetSection: "home" },
         { path: "/visa-application", label: "Visa", targetSection: "visa" },
-        // { path: "/blog", label: "Blog", targetSection: "blog" },
       ];
 
   const handleScrollToSection = (sectionId?: string) => {

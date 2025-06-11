@@ -200,3 +200,38 @@
       
     }
   }
+
+  .autocompleteWrapper {
+    position: relative;
+  }
+  
+  .suggestions {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+    li {
+      padding: 0.5rem;
+      cursor: pointer;
+      color: #1D1D1D;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+  
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+  
+  
